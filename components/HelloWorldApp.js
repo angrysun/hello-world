@@ -18,24 +18,26 @@ const HelloWorldApp = () => {
         style={{ backgroundColor: 'red' }}>
         <Text style={{ fontSize: 20, color: '#fff' }}>Touch here</Text>
       </TouchableOpacity>
-      <ScrollView >
-        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://picsum.photos/100/100' }}></Image>
-        {/* <Image style={{ width: 100, height: 100 }} source={require('./react-native.jpg')}></Image> */}
-        <View
-          style={{
-            width: 100,
-            height: 100,
-            backgroundColor: 'red'
-          }}>
-        </View>
-        <View
-          style={{
-            width: 100,
-            height: 100,
-            backgroundColor: 'green'
-          }}>
-        </View>
-      </ScrollView>
+      <View style={{ height: 400, backgroundColor: '#e5e5e5' }}>
+        <ScrollView horizontal>
+          <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://picsum.photos/100/100' }}></Image>
+          {/* <Image style={{ width: 100, height: 100 }} source={require('./react-native.jpg')}></Image> */}
+          <View
+            style={{
+              width: 100,
+              height: 100,
+              backgroundColor: 'red'
+            }}>
+          </View>
+          <View
+            style={{
+              width: 100,
+              height: 100,
+              backgroundColor: 'green'
+            }}>
+          </View>
+        </ScrollView>
+      </View>
     </View>
   )
 }
