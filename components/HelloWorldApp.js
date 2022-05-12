@@ -16,7 +16,7 @@ const HelloWorldApp = () => {
       <TouchableOpacity
         onPress={() => alert('Oh it\'s hot!')}
         style={{ backgroundColor: 'red' }}>
-        <Text style={{ fontSize: 20, color: '#fff' }}>Touch the sun</Text>
+        <Text style={{ fontSize: 20, color: '#fff' }}>Touch here</Text>
       </TouchableOpacity>
     </View>
   )
