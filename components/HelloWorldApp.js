@@ -11,7 +11,7 @@ const HelloWorldApp = () => {
         alignItems: "center"
       }}>
       <Text>Hello, world!</Text>
-      <Text>My name is Steven!</Text>
+      <Text>My name is <Text style={{ fontWeight: 'bold'}}>Steven!</Text></Text>
       <Image source={sun} style={{width: 150, height: 150}} />
       <TouchableOpacity
         onPress={() => alert('Oh it\'s hot!')}
