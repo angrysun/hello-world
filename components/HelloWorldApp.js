@@ -18,6 +18,20 @@ const HelloWorldApp = () => {
         style={{ backgroundColor: 'red' }}>
         <Text style={{ fontSize: 20, color: '#fff' }}>Touch here</Text>
       </TouchableOpacity>
+      <View
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: 'red'
+        }}>
+      </View>
+      <View
+        style={{
+          width: 100,
+          height: 100,
+          backgroundColor: 'green'
+        }}>
+      </View>
     </View>
   )
 }
