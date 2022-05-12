@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Image, Text, TouchableOpacity, View } from 'react-native';
+import { Image, Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import sun from './assets/sun.png';
 
 const HelloWorldApp = () => {
@@ -18,22 +18,24 @@ const HelloWorldApp = () => {
         style={{ backgroundColor: 'red' }}>
         <Text style={{ fontSize: 20, color: '#fff' }}>Touch here</Text>
       </TouchableOpacity>
-      <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://picsum.photos/100/100' }}></Image>
-      {/* <Image style={{ width: 100, height: 100 }} source={require('./react-native.jpg')}></Image> */}
-      <View
-        style={{
-          width: 100,
-          height: 100,
-          backgroundColor: 'red'
-        }}>
-      </View>
-      <View
-        style={{
-          width: 100,
-          height: 100,
-          backgroundColor: 'green'
-        }}>
-      </View>
+      <ScrollView >
+        <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://picsum.photos/100/100' }}></Image>
+        {/* <Image style={{ width: 100, height: 100 }} source={require('./react-native.jpg')}></Image> */}
+        <View
+          style={{
+            width: 100,
+            height: 100,
+            backgroundColor: 'red'
+          }}>
+        </View>
+        <View
+          style={{
+            width: 100,
+            height: 100,
+            backgroundColor: 'green'
+          }}>
+        </View>
+      </ScrollView>
     </View>
   )
 }
