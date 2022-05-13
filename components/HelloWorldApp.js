@@ -36,6 +36,7 @@ const HelloWorldApp = () => {
         <TextInput
           style={{ padding: 8, backgroundColor: '#f5f5f5' }}
           onChangeText={setName}
+          secureTextEntry={true}
         />
       </View>
       <View style={{ height: 400, backgroundColor: '#e5e5e5' }}>
