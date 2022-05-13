@@ -3,6 +3,8 @@ import { Image, Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import sun from './assets/sun.png';
 
 const HelloWorldApp = () => {
+  const [pressedCount, setPressedCount] = useState(0);
+
   return (
     <View
       style={{
@@ -18,6 +20,12 @@ const HelloWorldApp = () => {
         style={{ backgroundColor: 'red' }}>
         <Text style={{ fontSize: 20, color: '#fff' }}>Touch here</Text>
       </TouchableOpacity>
+      <Text style={{ margin: 16 }}>
+        {pressedCount > 0
+          ? `The button was pressed ${pressedCount} times!`
+          : "The button isn't pressed yet"}
+      </Text>
+
       <View style={{ height: 400, backgroundColor: '#e5e5e5' }}>
         <ScrollView horizontal>
           <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://picsum.photos/100/100' }}></Image>
