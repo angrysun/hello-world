@@ -1,5 +1,5 @@
-import React from 'react';
-import { Image, Text, TouchableOpacity, View, ScrollView } from 'react-native';
+import React, { useState } from 'react';
+import { Button, Image, Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import sun from './assets/sun.png';
 
 const HelloWorldApp = () => {
@@ -25,7 +25,7 @@ const HelloWorldApp = () => {
           ? `The button was pressed ${pressedCount} times!`
           : "The button isn't pressed yet"}
       </Text>
-
+      <Button title="Press me" onPress={() => setPressedCount(pressedCount + 1)} disabled={pressedCount >= 3 ? true : false} />
       <View style={{ height: 400, backgroundColor: '#e5e5e5' }}>
         <ScrollView horizontal>
           <Image style={{ width: 100, height: 100 }} source={{ uri: 'https://picsum.photos/100/100' }}></Image>
