@@ -4,17 +4,18 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import HelloWorldApp from './components/HelloWorldApp';
 import { Box } from './components/Box';
 import { Input } from './components/Input';
+import Constants from 'expo-constants';
 
 export default function App() {
   const [inputEmail, setInputEmail] = useState('');
-  const [inputPassword, setInputPassword] = useState('');
+  const [password, setPassword] = useState('');
   const [inputPetName, setInputPetName] = useState('');
   const [inputPetBday, setInputPetBday] = useState('');
   const [inputBreed, setInputBreed] = useState('');
   const [inputToy, setInputToy] = useState('');
 
   return (
-    <ScrollView contentContainerStyle={styles.container} >
+    <ScrollView contentContainerStyle={styles.scroll} >
       {/* <HelloWorldApp />
       <Box color="blue" />
       <StatusBar style="auto" /> */}
@@ -26,17 +27,18 @@ export default function App() {
       />
       <Input
         label="Password"
-        val={inputPassword}
-        setVal={setInputPassword}
+        val={password}
+        setVal={setPassword}
         holder={'Input your password here'}
-        secure={true}
+        secureTextEntry
       />
       <Input
-        label="Re-enter Password"
-        val={inputPassword}
-        setVal={setInputPassword}
-        holder={'Re-input your password here'}
-        secure={true}
+        label="Confirm Password"
+        val={password}
+        setVal={setPassword}
+        onSubmitEditing={(e) => {
+          confirmPasswordsMatch(e.nativeEvent.text, password);
+        }}
       />
       <Input
         label="Pet's name"
@@ -66,11 +68,23 @@ export default function App() {
   );
 }
 
+function confirmPasswordsMatch(confirmationPassword, originalPassword) {
+  if (confirmationPassword !== originalPassword) {
+    alert('Passwords do not match, please try again.');
+  }
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    // alignItems: 'center',
+    alignItems: 'center',
     justifyContent: 'center',
   },
+  scroll: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: Constants.statusBarHeight,
+    backgroundColor: '#ecf0f1',
+  }
 });
