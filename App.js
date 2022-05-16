@@ -126,5 +126,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     // padding: Constants.statusBarHeight,
     backgroundColor: '#ecf0f1',
-  }
+  },
+  card: {
+    width: 100,
+    height: 100,
+    backgroundColor: 'white',
+    margin: 16,
+    borderRadius: 2,
+    shadowColor: 'black',
+    shadowOpacity: 0.3,
+    shadowRadius: 1,
+    shadowOffset: { height: 1, width: 0.3 }
+  },
 });
