@@ -10,6 +10,7 @@ export const Input = (props) => (
       placeholder={props.holder}
       value={props.val}
       onChangeText={props.setVal}
+      secureTextEntry={props.secure}
     />
   </View>
 );
