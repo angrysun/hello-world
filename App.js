@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Button, ScrollView, Pressable } from 'react-native';
 import HelloWorldApp from './components/HelloWorldApp';
 import { Box } from './components/Box';
 import { Input } from './components/Input';
+import { PressedBox } from './components/PressedBox';
 import { Formik } from 'formik'
 
 export default function App() {
@@ -15,6 +16,11 @@ export default function App() {
   // const [inputToy, setInputToy] = useState('');
 
   return (
+    // <View style={styles.layout}>
+    //   <Pressable>
+    //     {(state) => <Box pressed={state.pressed} />}
+    //   </Pressable>
+    // </View>
     <Formik
       initialValues={{ email: '', password: '', name: '', birthday: '', breed: '', toy: '' }}
       onSubmit={values => console.log(values)}
@@ -127,6 +133,11 @@ const styles = StyleSheet.create({
     // padding: Constants.statusBarHeight,
     backgroundColor: '#ecf0f1',
   },
+  layout: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   card: {
     width: 100,
     height: 100,
@@ -137,5 +148,10 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 1,
     shadowOffset: { height: 1, width: 0.3 }
+  },
+  box: {
+    width: 100,
+    height: 100,
+    backgroundColor: 'red',
   },
 });
