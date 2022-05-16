@@ -6,6 +6,13 @@ import { Box } from './components/Box';
 import { Input } from './components/Input';
 
 export default function App() {
+  const[inputEmail, setInputEmail] = useState('');
+  const [inputPassword, setInputPassword] = useState('');
+  const [inputPetName, setInputPetName] = useState('');
+  const [inputPetBday, setInputPetBday] = useState('');
+  const [inputBreed, setInputBreed] = useState('');
+  const [inputToy, setInputToy] = useState('');
+
   return (
     <View style={styles.container}>
       {/* <HelloWorldApp />
