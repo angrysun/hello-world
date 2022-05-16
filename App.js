@@ -18,12 +18,39 @@ export default function App() {
       {/* <HelloWorldApp />
       <Box color="blue" />
       <StatusBar style="auto" /> */}
-      <Input label="email" />
-      <Input label="password" />
-      <Input label="pet's name" />
-      <Input label="pet's date of birth" />
-      <Input label="breed" />
-      <Input label="favorite toy" />
+      <Input
+        label="Email"
+        val={inputEmail}
+        setVal={setInputEmail}
+        holder={'Input your email here'}
+      />
+      <Input
+        label="Password"
+        val={inputPassword}
+        setVal={setInputPassword}
+        holder={'Input your password here'}
+      />
+      <Input
+        label="pet's name"
+        val={inputPetName}
+        setVal={setInputPetName}
+        holder={"Input your pet's name here"}
+      />
+      <Input
+        label="pet's date of birth"
+        val={inputEmail}
+        setVal={setInputEmail}
+      />
+      <Input
+        label="breed"
+        val={inputEmail}
+        setVal={setInputEmail}
+      />
+      <Input
+        label="favorite toy"
+        val={inputEmail}
+        setVal={setInputEmail}
+      />
     </View>
   );
 }
