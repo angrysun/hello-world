@@ -39,6 +39,7 @@ export default function App() {
         onSubmitEditing={(e) => {
           confirmPasswordsMatch(e.nativeEvent.text, password);
         }}
+        secureTextEntry
       />
       <Input
         label="Pet's name"
