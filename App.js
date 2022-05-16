@@ -12,7 +12,11 @@ export default function App() {
       <Box color="blue" />
       <StatusBar style="auto" /> */}
       <Input label="email" />
-
+      <Input label="password" />
+      <Input label="pet's name" />
+      <Input label="pet's date of birth" />
+      <Input label="breed" />
+      <Input label="favorite toy" />
     </View>
   );
 }
