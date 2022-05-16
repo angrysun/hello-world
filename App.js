@@ -31,25 +31,28 @@ export default function App() {
         holder={'Input your password here'}
       />
       <Input
-        label="pet's name"
+        label="Pet's name"
         val={inputPetName}
         setVal={setInputPetName}
         holder={"Input your pet's name here"}
       />
       <Input
-        label="pet's date of birth"
-        val={inputEmail}
-        setVal={setInputEmail}
+        label="Pet's date of birth"
+        val={inputPetBday}
+        setVal={setInputPetBday}
+        holder={"Input your pet's birthday here"}
       />
       <Input
-        label="breed"
-        val={inputEmail}
-        setVal={setInputEmail}
+        label="Breed"
+        val={inputBreed}
+        setVal={setInputBreed}
+        holder={"Input your pet's breed here"}
       />
       <Input
         label="favorite toy"
-        val={inputEmail}
-        setVal={setInputEmail}
+        val={inputToy}
+        setVal={setInputToy}
+        holder={"Input your pet's favorite toy here"}
       />
     </View>
   );
