@@ -33,9 +33,8 @@ export default function App() {
         secureTextEntry
       />
       <Input
-        label="Confirm Password"
-        val={password}
-        setVal={setPassword}
+        label="Confirm password"
+        holder={'Re-input your password here'}
         onSubmitEditing={(e) => {
           confirmPasswordsMatch(e.nativeEvent.text, password);
         }}
@@ -60,7 +59,7 @@ export default function App() {
         holder={"Input your pet's breed here"}
       />
       <Input
-        label="Favorite Toy"
+        label="Favorite toy"
         val={inputToy}
         setVal={setInputToy}
         holder={"Input your pet's favorite toy here"}
