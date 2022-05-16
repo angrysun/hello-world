@@ -49,7 +49,7 @@ export default function App() {
         holder={"Input your pet's breed here"}
       />
       <Input
-        label="favorite toy"
+        label="Favorite Toy"
         val={inputToy}
         setVal={setInputToy}
         holder={"Input your pet's favorite toy here"}
