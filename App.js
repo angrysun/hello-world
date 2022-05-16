@@ -77,7 +77,13 @@ export default function App() {
             onBlur={handleBlur('toy')}
             holder={"Input your pet's favorite toy here"}
           />
-          <Button onPress={handleSubmit} title="Submit" />
+          <Button
+            onPress={handleSubmit}
+            title="Submit"
+            accessible={true}
+            accessibilityLabel="Press to Submit"
+            accessibilityHint="This will submit your form and you can continue"
+          />
         </ScrollView>
       )}
     </Formik>
