@@ -127,6 +127,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    // justifyContent: 'flex-end'
   },
   scroll: {
     flex: 1,
