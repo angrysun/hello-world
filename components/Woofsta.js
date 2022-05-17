@@ -35,3 +35,14 @@ const styles = StyleSheet.create({
     fontSize: 14
   },
 });
+
+// App-specific components
+
+const WoofCard = (props) => (
+  <View style={woofCardStyles.card}>
+    <Avatar url={props.url} />
+    <View style={{ textAlign: 'center' }}>
+      <Title>{props.name}</Title>
+    </View>
+  </View>
+);
