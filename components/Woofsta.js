@@ -61,3 +61,39 @@ const woofCardStyles = StyleSheet.create({
   },
   title: {},
 });
+
+const WoofPost = (props) => (
+  <View style={woofPostStyles.layout}>
+    <Image source={{ uri: props.image }} style={woofPostStyles.image} />
+    <View style={woofPostStyles.content}>
+      <Text style={woofPostStyles.title}>{props.title}</Text>
+      <Text style={woofPostStyles.description}>{props.description}</Text>
+    </View>
+  </View>
+);
+
+const woofPostStyles = StyleSheet.create({
+  layout: {
+    flexDirection: 'row',
+    margin: 6
+  },
+  image: {
+    flex: 1,
+    height: 70,
+    width: 40,
+    borderRadius: 10,
+  },
+  content: {
+    flex: 2,
+    flexDirection: 'column',
+    margin: 8
+  },
+  title: {
+    fontWeight: 700,
+    fontSize: 12,
+    marginBottom: 4
+  },
+  description: {
+    fontSize: 12
+  },
+});
