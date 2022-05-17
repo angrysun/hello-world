@@ -72,7 +72,7 @@ const WoofPost = (props) => (
     <Image source={{ uri: props.image }} style={woofPostStyles.image} />
     <View style={woofPostStyles.content}>
       <Text style={woofPostStyles.title}>{props.title}</Text>
-      <Text style={woofPostStyles.description}>{props.description}</Text>
+      <Text numberOfLines={2} style={woofPostStyles.description}>{props.description}</Text>
     </View>
   </View>
 );
