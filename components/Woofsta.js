@@ -60,7 +60,12 @@ const woofCardStyles = StyleSheet.create({
     backgroundColor: 'white',
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: '#f0eef2'
+    borderColor: '#f0eef2',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 5
   },
   title: {
     marginTop: 4
