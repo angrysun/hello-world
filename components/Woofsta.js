@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, FlatList, SafeAreaView, ScrollView, StyleSheet, Text, View } from "react-native";
 
 // Basic reusable components
 
@@ -39,14 +39,13 @@ const styles = StyleSheet.create({
   },
 });
 
-
 // App-specific components
 
 const WoofCard = (props) => (
   <View style={woofCardStyles.card}>
-    <Avatar url={props.url} />
+    <Avatar url={props.avatar} />
     <View style={{ textAlign: 'center' }}>
-      <Title>{props.name}</Title>
+      <Title style={woofCardStyles.title}>{props.name}</Title>
     </View>
   </View>
 );
@@ -56,14 +55,16 @@ const woofCardStyles = StyleSheet.create({
     margin: 6,
     alignItems: 'center',
     justifyContent: 'center',
-    height: 100,
+    height: 110,
     width: 85,
     backgroundColor: 'white',
     borderWidth: 1,
     borderRadius: 10,
     borderColor: '#f0eef2'
   },
-  title: {},
+  title: {
+    marginTop: 4
+  },
 });
 
 const WoofPost = (props) => (
@@ -79,7 +80,7 @@ const WoofPost = (props) => (
 const woofPostStyles = StyleSheet.create({
   layout: {
     flexDirection: 'row',
-    margin: 6
+    margin: 4
   },
   image: {
     flex: 1,
@@ -95,7 +96,7 @@ const woofPostStyles = StyleSheet.create({
   title: {
     fontWeight: 700,
     fontSize: 12,
-    marginBottom: 4
+    marginBottom: 4,
   },
   description: {
     fontSize: 12
@@ -104,11 +105,14 @@ const woofPostStyles = StyleSheet.create({
 
 // The screen rendering everything
 const HomeScreen = () => (
-  <ScrollView style={{ margin: 14 }}>
+  <ScrollView style={{ padding: 8 }}>
     <Heading>Trending Woofs</Heading>
-    <ScrollView horizontal>
-      {woofs}
-    </ScrollView>
+    <FlatList
+      horizontal
+      data={data.woofs}
+      renderItem={renderItem}
+      keyExtractor={item => item.id}
+    />
     <Heading>New Woof Posts</Heading>
     <ScrollView>
       {posts}
@@ -116,12 +120,20 @@ const HomeScreen = () => (
   </ScrollView>
 );
 
-const App = () => (
-  <SafeAreaView style={{ flex: 1, backgroundColor: '#FAF9FA' }}>
-    <HomeScreen />
-  </SafeAreaView>
+const renderItem = ({ item }) => (
+  <WoofCard
+    name={item.name}
+    avatar={item.avatar}
+  />
 );
 
+const App = () => {
+  return (
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#FAF9FA' }}>
+      <HomeScreen />
+    </SafeAreaView>
+  );
+}
 export default App;
 
 // "Fake" API data to use in your app
