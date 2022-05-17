@@ -49,6 +49,7 @@ const WoofCard = (props) => (
 
 const woofCardStyles = StyleSheet.create({
   card: {
+    margin: 6,
     alignItems: 'center',
     justifyContent: 'center',
     height: 100,
@@ -58,7 +59,5 @@ const woofCardStyles = StyleSheet.create({
     borderRadius: 10,
     borderColor: '#f0eef2'
   },
-  title: {
-
-  },
+  title: {},
 });
