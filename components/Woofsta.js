@@ -29,11 +29,13 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontWeight: 800,
-    fontSize: 20
+    fontSize: 16,
+    margin: 4,
+    marginBottom: 12
   },
   title: {
-    fontWeight: 600,
-    fontSize: 14
+    fontWeight: 700,
+    fontSize: 12
   },
 });
 
