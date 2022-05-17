@@ -107,29 +107,11 @@ const HomeScreen = () => (
   <ScrollView style={{ margin: 14 }}>
     <Heading>Trending Woofs</Heading>
     <ScrollView horizontal>
-      <WoofCard
-        name={'REX'}
-        url={'https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=648&q=80'}
-      />
-      <WoofCard
-        name={'Tim'}
-        url={'https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=648&q=80'}
-      />
-      <WoofCard
-        name={'Tim'}
-        url={'https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=648&q=80'}
-      />
-      <WoofCard
-        name={'Tim'}
-        url={'https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=648&q=80'}
-      />
+      {woofs}
     </ScrollView>
+    <Heading>New Woof Posts</Heading>
     <ScrollView>
-      <WoofPost
-        image={'https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=850&q=80'}
-        title={'PARTY ON'}
-        description={'Come here to party?'}
-      />
+      {posts}
     </ScrollView>
   </ScrollView>
 );
