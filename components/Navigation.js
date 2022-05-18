@@ -9,12 +9,19 @@ const FeedScreen = () => (
   </View>
 )
 
+const CatalogScreen = () => (
+  <View style={styles.layout}>
+    <Text style={styles.title}>Catalog Screen</Text>
+  </View>
+);
+
 const Stack = createBottomTabNavigator();
 
 const App = () => (
   <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen name="Feed" component={FeedScreen} />
+      <Stack.Screen name="Catalog" component={CatalogScreen} />
     </Stack.Navigator>
   </NavigationContainer>
 );
