@@ -24,8 +24,28 @@ const CatalogScreen = () => (
   </View>
 );
 
-// const Stack = createBottomTabNavigator();
+const OverviewScreen = () => (
+  <View style={styles.layout}>
+    <Text style={styles.title}>Overview</Text>
+  </View>
+);
+
+const ProfileNavigator = () => (
+  <Stack.Navigator>
+    <Stack.Screen name="Overview" component={OverviewScreen} />
+  </Stack.Navigator>
+);
+
 const Stack = createStackNavigator();
+
+const Tab = createBottomTabNavigator();
+
+export const AppNavigator = () => (
+  <Tab.Navigator>
+    <Tab.Screen name="Feed" component={FeedScreen} />
+    <Tab.Screen name="Profile" component={ProfileNavigator} />
+  </Tab.Navigator>
+);
 
 const App = () => (
   <NavigationContainer>
@@ -33,6 +53,7 @@ const App = () => (
       <Stack.Screen name="Feed" component={FeedScreen} />
       <Stack.Screen name="Catalog" component={CatalogScreen} />
     </Stack.Navigator>
+    {/* <AppNavigator /> */}
   </NavigationContainer>
 );
 
