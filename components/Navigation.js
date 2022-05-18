@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 const FeedScreen = () => (
   <View style={styles.layout}>
@@ -9,7 +9,7 @@ const FeedScreen = () => (
   </View>
 )
 
-const Stack = createStackNavigator();
+const Stack = createBottomTabNavigator();
 
 const App = () => (
   <NavigationContainer>
