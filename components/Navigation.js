@@ -1,9 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import { useNavigation } from '@react-navigation/native';
 
 const FeedScreen = () => {
   const nav = useNavigation();
@@ -11,10 +10,13 @@ const FeedScreen = () => {
   return (
     <View style={styles.layout}>
       <Text style={styles.title}>Feed</Text>
+      <Button
+        title="Go to Catalog"
+        onPress={() => nav.navigate('Catalog')}
+      />
     </View>
   );
 };
-
 
 const CatalogScreen = () => (
   <View style={styles.layout}>
